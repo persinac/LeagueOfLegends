@@ -18,14 +18,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
+
+    <!--
     <link href='dist/fullcalendar/fullcalendar.css' rel='stylesheet' />
     <link href='dist/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
     <link rel="stylesheet" href="dist/jq_ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" />
     <link href="dist/css/jquery.datepick.css" rel="stylesheet">
+    -->
+
+    <!--
     <link href="dist/css/first_page_css.css" rel="stylesheet">
     <link href="dist/css/tabs.css" rel="stylesheet">
     <link href="dist/css/profiles.css" rel="stylesheet">
     <link href="dist/css/tabs_ext_challenge.css" rel="stylesheet">
+    -->
+
     <link href="dist/css/group_ext.css" rel="stylesheet">
     <link href="dist/css/league_custom.css" rel="stylesheet">
     <link href="dist/css/graph_NetworkOfSummoners.css" rel="stylesheet">
@@ -37,7 +44,6 @@
 
     <![endif]-->
     <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>-->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body >
 
@@ -100,15 +106,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--
 <script src="dist/jq_ui/js/jquery-1.10.2.js"></script>
 <script src="dist/jq_ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/1.2.10/jquery.floatThead.js"></script>
 <script src="dist/js/lol_builds.js"></script>
 <script src="dist/js/api_interface.js"></script>
 <script src="dist/js/graphing_utility.js"></script>
 <!-- Required for date picker -->
+<!--
 <script src="dist/js/jquery.plugin.min.js"></script>
 <script src="dist/js/jquery.datepick.min.js"></script>
+-->
+
+
 <script src="dist/js/svg-pan-zoom.min.js"></script>
 
 <script src="dist/js/utilities.js"></script>
