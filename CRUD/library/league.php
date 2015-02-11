@@ -23,6 +23,12 @@ class league
     var $player_map = '';
     var $champ_map = '';
 
+    var $player_nodes = '';
+    var $player_links = '';
+    var $temp_table = '';
+    var $global_counter = 0;
+    var $recursive_calls = 0;
+
     function NewConnection($host, $user, $pass, $database)
     {
         $this->mys = mysqli_connect($host, $user, $pass, $database);
@@ -1154,81 +1160,169 @@ where summonerId in (select summonerId from SummonerGroups where group_id = 1))
 
     function FetchDataForSummonerNetwork_FD($sid)
     {
-        $parent = new stdClass();
-        $children = array();
         $main_string = "";
         $nodes = '"nodes":[';
         $links = '"links":[';
         $index = 1;
-        $player_nodes = '';
-        $player_links = '';
+
+        $target = 0;
+        $source = 0;
+        $type = 1;
+        $value = 1;
+        $degree = 0;
+
         $distance = 10;
 
+        $html = '<div class="recent_games_size">';
+        $html .= '<table id="win_perc_by_lane_table" class="table table-striped table-hover">';
+        $html .= '<thead class="header_bg">
+            <th></th>
+            <th>Source</th>
+            <th>Target</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Value</th>
+            <th>Degree</th>
+            <th>Distance</th>
+            <th>RCalls</th>
+            </tr>';
+        $html .= '</thead>';
+        $html .= '<tbody>';
         $query = "CALL getNetworkOfSummoners($sid)";
         $s_name = $this->GetSummonerName($sid);
-        $player_nodes .= '{"name":"' . $s_name . '","type":"1",';
-        $player_nodes .= '"full_name":"' . $s_name . '","slug":"",';
-        $player_nodes .= '"entity":"company","img_hrefD":"","img_hrefL":""';
-        $player_nodes .= '},';
+        $html .= '<tr>';
+        $html .= '<td >'.$this->global_counter.'</td>';
+        $html .= '<td >0</td>';
+        $html .= '<td >1</td>';
+        $html .= '<td >'.$index.'</td>';
+        $html .= '<td >'.$s_name.'</td>';
+        $html .= '<td >1</td>';
+        $html .= '<td >0</td>';
+        $html .= '<td >0</td>';
+        $html .= '<td >'.$this->recursive_calls.'</td>';
+        $html .= '</tr>';
+        $this->temp_table = $html;
+        $this->global_counter = $this->global_counter + 1;
+
+        $this->player_nodes .= '{"name":"' . $s_name . '"
+                                , "type":"'.$type.'"
+                                , "full_name":"' . $s_name . '"
+                                , "slug":""
+                                , "entity":"company"
+                                , "img_hrefD":""
+                                , "img_hrefL":""
+                                },';
+
         $this->mys->next_result();
         if ($result = $this->mys->query($query)) {
+            $type = $type + 1;
             while ($row = $result->fetch_assoc()) {
+                $target = $index;
                 if ($index % 10 == 0) {
                     $distance = $distance + 10;
                 }
-               /*if ($index < 5) {
-                    $player_nodes .= '{';
-                    $player_nodes .= '"name":"' . $row['summonerName'] . '","type":"2",';
-                    $player_nodes .= '"full_name":"' . $row['summonerName'] . '","slug":"",';
-                    $player_nodes .= '"entity":"company","img_hrefD":"","img_hrefL":""';
-                    $player_nodes .= '},';
-                    $player_links .= '{"source":0, "target":' . $index . ', "distance":' . $distance . ',"value":1},';
-                }*/
 
-                $player_nodes .= '{';
-                $player_nodes .= '"name":"' . $row['summonerName'] . '","type":"2",';
-                $player_nodes .= '"full_name":"' . $row['summonerName'] . '","slug":"",';
-                $player_nodes .= '"entity":"company","img_hrefD":"","img_hrefL":"",';
-                $player_nodes .= '"summonerId":"'.$row['summonerId'].'"},';
-                $player_links .= '{"source":0, "target":' . $index . ', "distance":' . $distance . ',"value":1},';
+                $this->player_nodes .= '{"name":"'.$row['summonerName'].'"
+                , "type":"'.$type.'", "full_name":"'.$row['summonerName'].'", "slug":""
+                , "entity":"company", "img_hrefD":"", "img_hrefL":"", "summonerId":"'.$row['summonerId'].'"},';
+
+                $this->player_links .= '{"source":'.$source.', "target":' . $target . '
+                , "distance":' . $distance . ', "value":'.$value.'},';
+
+                $html = '<tr>';
+                $html .= '<td >'.$this->global_counter.'</td>';
+                $html .= '<td >'.$source.'</td>';
+                $html .= '<td >'.$target.'</td>';
+                $html .= '<td >'.$index.'</td>';
+                $html .= '<td >'.$row['summonerName'].'</td>';
+                $html .= '<td >'.$value.'</td>';
+                $html .= '<td >'.$degree.'</td>';
+                $html .= '<td >'.$distance.'</td>';
+                $html .= '<td >'.$this->recursive_calls.'</td>';
+                $html .= '</tr>';
+                $this->temp_table .= $html;
+                $this->global_counter = $this->global_counter + 1;
+
+                $this->recursive_NoS($row['summonerId'], $degree,
+                                        $type, $value, $source + 1,
+                                        $distance, $index);
+                $this->recursive_calls = $this->recursive_calls + 1;
                 $index = $index + 1;
             }
             $result->free();
         }
 
-        $player_nodes .= '{';
-        $player_nodes .= '"name":"TEST1","type":"2",';
-        $player_nodes .= '"full_name":"TEST1","slug":"",';
-        $player_nodes .= '"entity":"company","img_hrefD":"","img_hrefL":"",';
-        $player_nodes .= '"summonerId":"10003"},';
-        $player_links .= '{"source":1, "target":' . $index . ', "distance":' . $distance . ',"value":1},';
-        $index = $index + 1;
-        $player_nodes .= '{';
-        $player_nodes .= '"name":"TEST2","type":"2",';
-        $player_nodes .= '"full_name":"TEST2","slug":"",';
-        $player_nodes .= '"entity":"company","img_hrefD":"","img_hrefL":"",';
-        $player_nodes .= '"summonerId":"10002"},';
-        $player_links .= '{"source":2, "target":' . $index . ', "distance":' . $distance . ',"value":1},';
-        $index = $index + 1;
-        $player_nodes .= '{';
-        $player_nodes .= '"name":"TEST3","type":"2",';
-        $player_nodes .= '"full_name":"TEST3","slug":"",';
-        $player_nodes .= '"entity":"company","img_hrefD":"","img_hrefL":"",';
-        $player_nodes .= '"summonerId":"10001"},';
-        $player_links .= '{"source":7, "target":' . $index . ', "distance":' . $distance . ',"value":1},';
-        $index = $index + 1;
-        $player_nodes .= '{';
-        $player_nodes .= '"name":"TEST4","type":"2",';
-        $player_nodes .= '"full_name":"TEST4","slug":"",';
-        $player_nodes .= '"entity":"company","img_hrefD":"","img_hrefL":"",';
-        $player_nodes .= '"summonerId":"10000"},';
-        $player_links .= '{"source":5, "target":' . $index . ', "distance":' . $distance . ',"value":1},';
-
-        $nodes .= substr($player_nodes, 0, strlen($player_nodes) - 1);
-        $links .= substr($player_links, 0, strlen($player_links) - 1);
+        $nodes .= substr($this->player_nodes, 0, strlen($this->player_nodes) - 1);
+        $links .= substr($this->player_links, 0, strlen($this->player_links) - 1);
 
         $main_string = "{" . $nodes . "]," . $links . "]}";
+        $html = '</tbody></table>';
+        $html .= '</div>';
+        $this->temp_table .= $html;
         return $main_string;
+    }
+
+    function recursive_NoS($id, $degree, $type, $value, $source, $distance, &$index) {
+
+        $t_id = $id;
+        $t_degree = $degree;
+        $t_type = $type;
+        $t_value = $value;
+        $t_source = $source;
+        $t_distance = ($distance * $degree);
+
+        $target = 0;
+
+        $my_counter = 0;
+
+        $html = "";
+
+        if($degree < 2) {
+            while($my_counter < 2) {
+                $target = $index;
+                $html .= '<tr>';
+                $html .= '<td >'.$this->global_counter.'</td>';
+                $html .= '<td >'.$t_source.'</td>';
+                $html .= '<td >'.$target.'</td>';
+                $html .= '<td >'.$index.'</td>';
+                $html .= '<td >TEST'.$target.'</td>';
+                $html .= '<td >'.$t_value.'</td>';
+                $html .= '<td >'.$t_degree.'</td>';
+                $html .= '<td >'.$t_distance.'</td>';
+                $html .= '<td >'.$this->recursive_calls.'</td>';
+                $html .= '</tr>';
+
+                $this->player_nodes .= '{"name":"TEST'.$target.'"
+                                        ,"type":'.$t_value.'
+                                        ,"full_name":"TEST'.$target.'"
+                                        ,"slug":""
+                                        ,"entity":"company"
+                                        ,"img_hrefD":""
+                                        ,"img_hrefL":""
+                                        ,"summonerId":"10000'.$target.'"},';
+                $this->player_links .= '{"source":'.$t_source.'
+                                        , "target":' . $target . '
+                                        , "distance":' . $t_distance . '
+                                        ,"value":'.$t_value.'},';
+                $my_counter = $my_counter + 1;
+                $index = $index + 1;
+                $this->global_counter = $this->global_counter + 1;
+            }
+            $html .= '<tr>';
+            $html .= '<td >'.$this->global_counter.'</td>';
+            $html .= '<td ></td>';
+            $html .= '<td ></td>';
+            $html .= '<td ></td>';
+            $html .= '<td ></td>';
+            $html .= '<td ></td>';
+            $html .= '<td ></td>';
+            $html .= '<td ></td>';
+            $html .= '<td >'.$this->recursive_calls.'</td>';
+            $html .= '</tr>';
+            $this->recursive_calls = $this->recursive_calls + 1;
+            $this->temp_table .= $html;
+            $this->recursive_NoS($t_id+1, $t_degree + 1, $t_type + 1, $t_value + 1, $t_source+1, $t_distance, $index);
+        }
     }
 }
 

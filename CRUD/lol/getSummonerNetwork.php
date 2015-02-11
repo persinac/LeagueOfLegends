@@ -16,7 +16,10 @@ include('../../CRUD/library/league_html_builder.php');
 $lol = new League();
 $lol->NewConnection($lol_host, $lol_un, $lol_pw, $lol_db);
 
+$toReturn = (object) array('graph_data'=>'', 'table_data'=>'asdf');
+
 $retVal = $lol->FetchDataForSummonerNetwork_FD($_SESSION['summonerId']);
-echo $retVal;
-//echo json_encode($retVal);
+$toReturn->graph_data = $retVal;
+$toReturn->table_data = $lol->temp_table;
+echo json_encode($toReturn);
 $lol->CloseConnection();
