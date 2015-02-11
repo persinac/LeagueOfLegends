@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - league_of_legends@127.0.0.1" uuid="eaf2bba2-1044-44db-8fa8-cb5d184f0cbf">
+    <database-info product="MySQL" version="5.5.35-0ubuntu0.12.04.2" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="league_of_legends"/>
+    <table name="ChampionLanePriority" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="championid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="champname" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="top_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="jungle_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="mid_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="adc_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="supp_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="championid"/>
+    </table>
+    <table name="GroupMembers" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="summoner_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+    </table>
+    <table name="Groups" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="group_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jy0n"/>
+      <primary-key name="PRIMARY" columns="group_id"/>
+    </table>
+    <table name="MatchDetails" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="matchid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="myteamskins" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="otherteamskins" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="top" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="mid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="jungle" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="support" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="adc" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="forfeitattwenty" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="first_game" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="matchid"/>
+    </table>
+    <table name="MatchHeader" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="matchid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="outcome" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="matchid"/>
+    </table>
+    <table name="MatchTeamDetails" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="match_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="our_top" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="our_mid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="our_jungle" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="our_support" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="our_adc" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ene_top" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ene_mid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ene_jungle" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ene_support" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ene_adc" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="match_id"/>
+    </table>
+    <table name="Players" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="playerid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="first_name" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12" def="Jy0n"/>
+      <column name="last_name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jy0n"/>
+      <column name="league_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" def="Jy0n"/>
+      <primary-key name="PRIMARY" columns="playerid"/>
+    </table>
+    <table name="SeasonFourChampionLanePriority" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="championid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="champname" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="top_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="jungle_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="mid_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="adc_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="supp_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <primary-key name="PRIMARY" columns="championid"/>
+    </table>
+    <table name="SeasonFourWorkingChampionLanePriority" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="championid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="top_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="tp_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="jungle_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="jp_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="mid_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="mp_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="adc_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="ap_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="supp_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="sp_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+    </table>
+    <table name="SummonerGroups" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="summonerId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+    </table>
+    <table name="api_MatchHistory" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="gameId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="gameMode" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="gameType" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="createDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="champ_played" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="teamId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="outcome" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="summonerId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+    </table>
+    <table name="api_log" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="data" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="whereDidIComeFrom" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jy0n"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="champions" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="champ_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="champ_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="champ_id"/>
+    </table>
+    <table name="workingChampionLanePriority" schema="" catalog="league_of_legends" type="TABLE">
+      <column name="championid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="top_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="tp_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="jungle_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="jp_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="mid_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="mp_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="adc_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="ap_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="supp_priority" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="sp_count" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+    </table>
+    <procedure name="getLaneWinPercentage" schema="" catalog="league_of_legends" type="1">
+      <prototype>
+        <parameter name="summonerid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="lane" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="getMatchDetails" schema="" catalog="league_of_legends" type="1">
+      <prototype>
+        <parameter name="match_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="getMatchesNotReturnedFromAPI" schema="" catalog="league_of_legends" type="1">
+      <prototype>
+        <parameter name="listOfMatches" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="summonerId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="getNetworkOfSummoners" schema="" catalog="league_of_legends" type="1">
+      <prototype>
+        <parameter name="id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="getRecentPlayedSummoners" schema="" catalog="league_of_legends" type="1">
+      <prototype>
+        <parameter name="sid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="getSummonerGroupsWinPerc" schema="" catalog="league_of_legends" type="1">
+      <prototype>
+        <parameter name="sql1" sqlType="VARCHAR" precision="1000" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="getTop10ChampionWinPercentage" schema="" catalog="league_of_legends" type="1">
+      <prototype>
+        <parameter name="sid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+      </prototype>
+    </procedure>
+  </data-source>
+</component>

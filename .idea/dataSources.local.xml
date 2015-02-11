@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - league_of_legends@127.0.0.1" uuid="eaf2bba2-1044-44db-8fa8-cb5d184f0cbf">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>league_of_legends.*</schema-pattern>
+      <default-schemas>league_of_legends.*</default-schemas>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>107.170.125.173</proxy-host>
+        <proxy-port>37806</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>alex</user>
+        <use-password>true</use-password>
+      </ssh-properties>
+    </data-source>
+  </component>
+</project>
