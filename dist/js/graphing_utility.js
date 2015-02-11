@@ -389,7 +389,7 @@ function graph_FD_SummonerNetwork(mydata) {
 	data = mydata;
     var w = t_width,
         h = t_height,
-        radius = d3.scale.log().domain([0, 312000]).range(["10", "50"]);
+        radius = d3.scale.log().domain([0, 150000]).range(["10", "50"]);
 
     var vis = d3.select("#test_graph_stuff").append("svg:svg")
         .attr("id", "mysvgele")
