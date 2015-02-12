@@ -172,10 +172,11 @@ function displaySummonerNetwork(data) {
             var json = JSON.parse(response);
             //console.log(json['graph_data']);
             $("#dyn_content").html(html);
-            //$("#mydata1").html(json['table_data']);
-            graph_FD_SummonerNetwork(json['graph_data']);
-            panZoom = svgPanZoom('#mysvgele');
-            //addPanZoom();
+            $("#mydata1").html(json['table_data']);
+            $("#mydata1").append(json['table_data_2']);
+
+            //graph_FD_SummonerNetwork(json['graph_data']);
+            //panZoom = svgPanZoom('#mysvgele');
         },
         error: function (response) {
             console.log("ERROR: " + response);

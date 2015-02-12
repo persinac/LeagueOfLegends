@@ -1283,43 +1283,8 @@ where summonerId in (select summonerId from SummonerGroups where group_id = 1))
         $t_source = $index;
         $my_counter = 0;
 
-
         $query = "CALL getNetworkOfSummoners($id)";
-        /*if($degree < 2) {
-            while($my_counter < 2) {
-                $target = $index + 1;
-                $html .= '<tr>';
-                $html .= '<td >'.$this->global_counter.'</td>';
-                $html .= '<td >'.$t_source.'</td>';
-                $html .= '<td >'.$target.'</td>';
-                $html .= '<td >'.$index.'</td>';
-                $html .= '<td >TEST'.$target.'</td>';
-                $html .= '<td >recursive_NoS</td>';
-                $html .= '<td > in while() </td>';
-                $html .= '<td > </td>';
-                $html .= '<td >'.$this->recursive_calls.'</td>';
-                $html .= '</tr>';
 
-                $this->player_nodes .= '{"name":"TEST'.$target.'"
-                                        ,"type":3
-                                        ,"full_name":"TEST'.$target.'"
-                                        ,"slug":""
-                                        ,"entity":"company"
-                                        ,"img_hrefD":""
-                                        ,"img_hrefL":""
-                                        ,"summonerId":"10000'.$target.'"},';
-                $this->player_links .= '{"source":'.$t_source.'
-                                        , "target":' . $target . '
-                                        , "distance":' . $t_distance . '
-                                        ,"value":10},';
-                $my_counter = $my_counter + 1;
-                $index = $index + 1;
-                $this->global_counter = $this->global_counter + 1;
-            }
-
-            $this->temp_table .= $html;
-            $this->recursive_NoS($t_id+1, $t_degree + 1, $t_type + 1, $t_value + 1, $t_source+1, $t_distance, $index);
-        }*/
         if($degree < 2) {
             $this->mys->next_result();
             if ($result = $this->mys->query($query)) {
@@ -1337,18 +1302,6 @@ where summonerId in (select summonerId from SummonerGroups where group_id = 1))
                     $html .= '<td >'.$this->recursive_calls.'</td>';
                     $html .= '</tr>';
 
-                    /*$this->player_nodes .= '{"name":"TEST'.$target.'"
-                                        ,"type":3
-                                        ,"full_name":"TEST'.$target.'"
-                                        ,"slug":""
-                                        ,"entity":"company"
-                                        ,"img_hrefD":""
-                                        ,"img_hrefL":""
-                                        ,"summonerId":"10000'.$target.'"},';
-                    $this->player_links .= '{"source":'.$t_source.'
-                                        , "target":' . $target . '
-                                        , "distance":' . $t_distance . '
-                                        ,"value":10},';*/
 
                     $this->player_nodes .= '{"name":"'.$row['summonerName'].'"
                 , "type":3, "full_name":"'.$row['summonerName'].'", "slug":""
