@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebb000b0-1546-4eff-813f-3ad4fde2e135" name="Default" comment="">
+    <list default="true" id="ebb000b0-1546-4eff-813f-3ad4fde2e135" name="Default" comment="Fixed the vertical tabs not showing up in team details view. Messed up the references">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CRUD/library/SummonerNetwork.php" afterPath="$PROJECT_DIR$/CRUD/library/SummonerNetwork.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/js/api_interface.js" afterPath="$PROJECT_DIR$/dist/js/api_interface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/js/graphing_utility.js" afterPath="$PROJECT_DIR$/dist/js/graphing_utility.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CRUD/library/league.php" afterPath="$PROJECT_DIR$/CRUD/library/league.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php" afterPath="$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leaguestats.php" afterPath="$PROJECT_DIR$/leaguestats.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="39d312d3-6348-4e22-858e-b102678010c2" name="Rejected commit: Default" comment="Fixed the vertical tabs not showing up in team details view. Messed up the references" />
     <ignored path="LeagueOfLegends.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -34,14 +38,6 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - league_of_legends@127.0.0.1" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="league_of_legends" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -50,57 +46,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MySQL - league_of_legends@127.0.0.1" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/8fb75f6/eaf2bba2-1044-44db-8fa8-cb5d184f0cbf/">
+      <file leaf-file-name="SummonerNetwork.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CRUD/library/SummonerNetwork.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0" vertical-offset="30" max-vertical-offset="102">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-0.009803922" vertical-offset="1925" max-vertical-offset="6103">
+              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+              <folding>
+                <marker date="1423776340694" expanded="true" signature="6621:6872" placeholder="..." />
+                <marker date="1423776340694" expanded="true" signature="8427:8445" placeholder="..." />
+                <marker date="1423776340694" expanded="true" signature="8427:8615" placeholder="..." />
+                <marker date="1423776340694" expanded="true" signature="9540:9647" placeholder="..." />
+                <marker date="1423776340694" expanded="true" signature="10226:10293" placeholder="select leagu..Players..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="league.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CRUD/library/league.php">
+      <file leaf-file-name="getSummonerNetwork.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5833333" vertical-offset="22729" max-vertical-offset="23409">
-              <caret line="1351" column="0" selection-start-line="1351" selection-start-column="0" selection-end-line="1351" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#93#0#PHP" expanded="true" />
-                <marker date="1423690122066" expanded="true" signature="1315:1745" placeholder="select mh.ma..." />
-                <marker date="1423690122066" expanded="true" signature="2523:2989" placeholder="select mh.ma..." />
-                <marker date="1423690122066" expanded="true" signature="3923:4388" placeholder="select mh.ma..." />
-                <marker date="1423690122066" expanded="true" signature="5324:5790" placeholder="select mh.ma..." />
-                <marker date="1423690122066" expanded="true" signature="6783:6825" placeholder="select * fro..Players..." />
-                <marker date="1423690122066" expanded="true" signature="7362:7514" placeholder="select summo..SummonerGroups..." />
-                <marker date="1423690122066" expanded="true" signature="8130:8254" placeholder="select champ..champions..." />
-                <marker date="1423690122066" expanded="true" signature="11359:11380" placeholder="select * fro..Players..." />
-                <marker date="1423690122066" expanded="true" signature="12244:12288" placeholder="select DISTI..SummonerGroups..." />
-                <marker date="1423690122066" expanded="true" signature="13156:13475" placeholder="select COUNT..MatchDetails..." />
-                <marker date="1423690122066" expanded="true" signature="13275:13398" placeholder="SELECT DISTI..api_MatchHistory..." />
-                <marker date="1423690122066" expanded="true" signature="13341:13397" placeholder="select summo..SummonerGroups..." />
-                <marker date="1423690122066" expanded="true" signature="15863:15930" placeholder="select MAX(m..MatchHeader..." />
-                <marker date="1423690122066" expanded="true" signature="17448:17485" placeholder="INSERT INTO ..." />
-                <marker date="1423690122066" expanded="true" signature="18178:18230" placeholder="INSERT INTO ..." />
-                <marker date="1423690122066" expanded="true" signature="19146:19204" placeholder="INSERT INTO ..." />
-                <marker date="1423690122066" expanded="true" signature="20049:20084" placeholder="INSERT INTO ..." />
-                <marker date="1423690122066" expanded="true" signature="21041:21094" placeholder="UPDATE Playe..." />
-                <marker date="1423690122066" expanded="true" signature="21599:21689" placeholder="select COUNT..Players..." />
-                <marker date="1423690122066" expanded="true" signature="22119:22211" placeholder="select champ..champions..." />
-                <marker date="1423690122066" expanded="true" signature="22716:22787" placeholder="select champ..champions..." />
-                <marker date="1423690122066" expanded="true" signature="23304:23730" placeholder="select clp.c..ChampionLanePriority..." />
-                <marker date="1423690122066" expanded="true" signature="26008:26217" placeholder="select clp.t..ChampionLanePriority..." />
-                <marker date="1423690122066" expanded="true" signature="27145:27183" placeholder="UPDATE worki..." />
-                <marker date="1423690122066" expanded="true" signature="28251:28282" placeholder="UPDATE Champ..." />
-                <marker date="1423690122066" expanded="true" signature="29256:29308" placeholder="INSERT INTO ..." />
-                <marker date="1423690122066" expanded="true" signature="29886:30021" placeholder="select COUNT..api_MatchHistory..." />
-                <marker date="1423690122066" expanded="true" signature="30634:30861" placeholder="select COUNT..MatchHeader..." />
-                <marker date="1423690122066" expanded="true" signature="31341:31466" placeholder="select * fro..api_MatchHistory..." />
-                <marker date="1423690122066" expanded="true" signature="34887:34960" placeholder="select summo..SummonerGroups..." />
-                <marker date="1423690122066" expanded="true" signature="35305:35372" placeholder="select leagu..Players..." />
-                <marker date="1423690122066" expanded="true" signature="35811:36165" placeholder="UPDATE Match..." />
-                <marker date="1423690122066" expanded="true" signature="38072:38324" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="102" max-vertical-offset="629">
+              <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,18 +75,8 @@
       <file leaf-file-name="api_interface.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/js/api_interface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2696" max-vertical-offset="4199">
-              <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graphing_utility.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/js/graphing_utility.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6657" max-vertical-offset="11611">
-              <caret line="394" column="31" selection-start-line="394" selection-start-column="31" selection-end-line="394" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2773" max-vertical-offset="4216">
+              <caret line="172" column="54" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -128,18 +85,25 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Alex Persinger" />
+      </list>
+    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php" />
-        <option value="$PROJECT_DIR$/leaguestats.php" />
         <option value="$PROJECT_DIR$/dist/css/league_custom.css" />
-        <option value="$PROJECT_DIR$/dist/js/api_interface.js" />
         <option value="$PROJECT_DIR$/dist/js/graphing_utility.js" />
         <option value="$PROJECT_DIR$/CRUD/library/league.php" />
+        <option value="$PROJECT_DIR$/CRUD/library/league_html_builder.php" />
+        <option value="$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php" />
+        <option value="$PROJECT_DIR$/leaguestats.php" />
+        <option value="$PROJECT_DIR$/dist/js/api_interface.js" />
+        <option value="$PROJECT_DIR$/CRUD/library/SummonerNetwork.php" />
       </list>
     </option>
   </component>
@@ -241,6 +205,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeagueOfLegends" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeagueOfLegends" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CRUD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeagueOfLegends" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeagueOfLegends" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CRUD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -318,30 +318,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22512235" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15355521" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.045385778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22541603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23600605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22512235" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -359,15 +360,90 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Fixed the vertical tabs not showing up in team details view. Messed up the references" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the vertical tabs not showing up in team details view. Messed up the references" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://db-console:/8fb75f6/eaf2bba2-1044-44db-8fa8-cb5d184f0cbf/">
+    <entry file="file://$PROJECT_DIR$/CRUD/library/league.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+        <state vertical-scroll-proportion="0.0" vertical-offset="18408" max-vertical-offset="22610">
+          <caret line="1089" column="49" selection-start-line="1089" selection-start-column="49" selection-end-line="1089" selection-end-column="49" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..Players..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..Players..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select DISTI..SummonerGroups..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..MatchDetails..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..api_MatchHistory..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select MAX(m..MatchHeader..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Playe..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..Players..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select clp.c..ChampionLanePriority..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select clp.t..ChampionLanePriority..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE worki..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Champ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..api_MatchHistory..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..MatchHeader..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..api_MatchHistory..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select leagu..Players..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Match..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/library/SummonerNetwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7004">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423776340694" expanded="true" signature="6621:6872" placeholder="..." />
+            <marker date="1423776340694" expanded="true" signature="8427:8445" placeholder="..." />
+            <marker date="1423776340694" expanded="true" signature="8427:8615" placeholder="..." />
+            <marker date="1423776340694" expanded="true" signature="9540:9647" placeholder="..." />
+            <marker date="1423776340694" expanded="true" signature="10226:10293" placeholder="select leagu..Players..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="595">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/api_interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2792" max-vertical-offset="4216">
+          <caret line="175" column="55" selection-start-line="175" selection-start-column="55" selection-end-line="175" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaguestats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3757">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -377,42 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="21962" max-vertical-offset="22593">
           <caret line="1287" column="53" selection-start-line="1287" selection-start-column="53" selection-end-line="1287" selection-end-column="53" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1423690122066" expanded="true" signature="1315:1745" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="2523:2989" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="3923:4388" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="5324:5790" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="6783:6825" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="7362:7514" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="8130:8254" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="11359:11380" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="12244:12288" placeholder="select DISTI..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="13156:13475" placeholder="select COUNT..MatchDetails..." />
-            <marker date="1423690122066" expanded="true" signature="13275:13398" placeholder="SELECT DISTI..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="13341:13397" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="15863:15930" placeholder="select MAX(m..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="17448:17485" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="18178:18230" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="19146:19204" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="20049:20084" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="21041:21094" placeholder="UPDATE Playe..." />
-            <marker date="1423690122066" expanded="true" signature="21599:21689" placeholder="select COUNT..Players..." />
-            <marker date="1423690122066" expanded="true" signature="22119:22211" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="22716:22787" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="23304:23730" placeholder="select clp.c..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="26008:26217" placeholder="select clp.t..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="27145:27183" placeholder="UPDATE worki..." />
-            <marker date="1423690122066" expanded="true" signature="28251:28282" placeholder="UPDATE Champ..." />
-            <marker date="1423690122066" expanded="true" signature="29256:29308" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="29886:30021" placeholder="select COUNT..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="30634:30861" placeholder="select COUNT..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="31341:31466" placeholder="select * fro..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="34887:34960" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="35305:35372" placeholder="select leagu..Players..." />
-            <marker date="1423690122066" expanded="true" signature="35811:36165" placeholder="UPDATE Match..." />
-            <marker date="1423690122066" expanded="true" signature="38072:38324" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -420,7 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2822" max-vertical-offset="3757">
           <caret line="171" column="15" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -428,7 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="442">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -436,7 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2696" max-vertical-offset="4199">
           <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -444,32 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="3162">
           <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
-          <folding>
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/8fb75f6/eaf2bba2-1044-44db-8fa8-cb5d184f0cbf/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -477,42 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="21962" max-vertical-offset="22593">
           <caret line="1287" column="53" selection-start-line="1287" selection-start-column="53" selection-end-line="1287" selection-end-column="53" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1423690122066" expanded="true" signature="1315:1745" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="2523:2989" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="3923:4388" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="5324:5790" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="6783:6825" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="7362:7514" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="8130:8254" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="11359:11380" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="12244:12288" placeholder="select DISTI..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="13156:13475" placeholder="select COUNT..MatchDetails..." />
-            <marker date="1423690122066" expanded="true" signature="13275:13398" placeholder="SELECT DISTI..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="13341:13397" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="15863:15930" placeholder="select MAX(m..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="17448:17485" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="18178:18230" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="19146:19204" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="20049:20084" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="21041:21094" placeholder="UPDATE Playe..." />
-            <marker date="1423690122066" expanded="true" signature="21599:21689" placeholder="select COUNT..Players..." />
-            <marker date="1423690122066" expanded="true" signature="22119:22211" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="22716:22787" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="23304:23730" placeholder="select clp.c..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="26008:26217" placeholder="select clp.t..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="27145:27183" placeholder="UPDATE worki..." />
-            <marker date="1423690122066" expanded="true" signature="28251:28282" placeholder="UPDATE Champ..." />
-            <marker date="1423690122066" expanded="true" signature="29256:29308" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="29886:30021" placeholder="select COUNT..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="30634:30861" placeholder="select COUNT..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="31341:31466" placeholder="select * fro..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="34887:34960" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="35305:35372" placeholder="select leagu..Players..." />
-            <marker date="1423690122066" expanded="true" signature="35811:36165" placeholder="UPDATE Match..." />
-            <marker date="1423690122066" expanded="true" signature="38072:38324" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -520,7 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3757">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,7 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="442">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -536,7 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2696" max-vertical-offset="4199">
           <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,32 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="3162">
           <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
-          <folding>
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/8fb75f6/eaf2bba2-1044-44db-8fa8-cb5d184f0cbf/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -577,42 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="21962" max-vertical-offset="22593">
           <caret line="1287" column="53" selection-start-line="1287" selection-start-column="53" selection-end-line="1287" selection-end-column="53" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1423690122066" expanded="true" signature="1315:1745" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="2523:2989" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="3923:4388" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="5324:5790" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="6783:6825" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="7362:7514" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="8130:8254" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="11359:11380" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="12244:12288" placeholder="select DISTI..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="13156:13475" placeholder="select COUNT..MatchDetails..." />
-            <marker date="1423690122066" expanded="true" signature="13275:13398" placeholder="SELECT DISTI..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="13341:13397" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="15863:15930" placeholder="select MAX(m..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="17448:17485" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="18178:18230" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="19146:19204" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="20049:20084" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="21041:21094" placeholder="UPDATE Playe..." />
-            <marker date="1423690122066" expanded="true" signature="21599:21689" placeholder="select COUNT..Players..." />
-            <marker date="1423690122066" expanded="true" signature="22119:22211" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="22716:22787" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="23304:23730" placeholder="select clp.c..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="26008:26217" placeholder="select clp.t..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="27145:27183" placeholder="UPDATE worki..." />
-            <marker date="1423690122066" expanded="true" signature="28251:28282" placeholder="UPDATE Champ..." />
-            <marker date="1423690122066" expanded="true" signature="29256:29308" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="29886:30021" placeholder="select COUNT..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="30634:30861" placeholder="select COUNT..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="31341:31466" placeholder="select * fro..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="34887:34960" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="35305:35372" placeholder="select leagu..Players..." />
-            <marker date="1423690122066" expanded="true" signature="35811:36165" placeholder="UPDATE Match..." />
-            <marker date="1423690122066" expanded="true" signature="38072:38324" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -620,7 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3757">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -628,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="442">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -636,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2696" max-vertical-offset="4199">
           <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,32 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="3162">
           <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
-          <folding>
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/8fb75f6/eaf2bba2-1044-44db-8fa8-cb5d184f0cbf/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,42 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="22593">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1423690122066" expanded="true" signature="1315:1745" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="2523:2989" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="3923:4388" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="5324:5790" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="6783:6825" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="7362:7514" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="8130:8254" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="11359:11380" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="12244:12288" placeholder="select DISTI..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="13156:13475" placeholder="select COUNT..MatchDetails..." />
-            <marker date="1423690122066" expanded="true" signature="13275:13398" placeholder="SELECT DISTI..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="13341:13397" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="15863:15930" placeholder="select MAX(m..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="17448:17485" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="18178:18230" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="19146:19204" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="20049:20084" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="21041:21094" placeholder="UPDATE Playe..." />
-            <marker date="1423690122066" expanded="true" signature="21599:21689" placeholder="select COUNT..Players..." />
-            <marker date="1423690122066" expanded="true" signature="22119:22211" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="22716:22787" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="23304:23730" placeholder="select clp.c..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="26008:26217" placeholder="select clp.t..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="27145:27183" placeholder="UPDATE worki..." />
-            <marker date="1423690122066" expanded="true" signature="28251:28282" placeholder="UPDATE Champ..." />
-            <marker date="1423690122066" expanded="true" signature="29256:29308" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="29886:30021" placeholder="select COUNT..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="30634:30861" placeholder="select COUNT..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="31341:31466" placeholder="select * fro..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="34887:34960" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="35305:35372" placeholder="select leagu..Players..." />
-            <marker date="1423690122066" expanded="true" signature="35811:36165" placeholder="UPDATE Match..." />
-            <marker date="1423690122066" expanded="true" signature="38072:38324" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="442">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2696" max-vertical-offset="4199">
           <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,89 +579,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="3162">
           <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
-          <folding>
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/8fb75f6/eaf2bba2-1044-44db-8fa8-cb5d184f0cbf/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/library/league.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20995">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1423690122066" expanded="true" signature="1315:1745" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="2523:2989" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="3923:4388" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="5324:5790" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="6783:6825" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="7362:7514" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="8130:8254" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="11359:11380" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="12244:12288" placeholder="select DISTI..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="13156:13475" placeholder="select COUNT..MatchDetails..." />
-            <marker date="1423690122066" expanded="true" signature="13275:13398" placeholder="SELECT DISTI..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="13341:13397" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="15863:15930" placeholder="select MAX(m..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="17448:17485" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="18178:18230" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="19146:19204" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="20049:20084" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="21041:21094" placeholder="UPDATE Playe..." />
-            <marker date="1423690122066" expanded="true" signature="21599:21689" placeholder="select COUNT..Players..." />
-            <marker date="1423690122066" expanded="true" signature="22119:22211" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="22716:22787" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="23304:23730" placeholder="select clp.c..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="26008:26217" placeholder="select clp.t..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="27145:27183" placeholder="UPDATE worki..." />
-            <marker date="1423690122066" expanded="true" signature="28251:28282" placeholder="UPDATE Champ..." />
-            <marker date="1423690122066" expanded="true" signature="29256:29308" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="29886:30021" placeholder="select COUNT..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="30634:30861" placeholder="select COUNT..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="31341:31466" placeholder="select * fro..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="34887:34960" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="35305:35372" placeholder="select leagu..Players..." />
-            <marker date="1423690122066" expanded="true" signature="35811:36165" placeholder="UPDATE Match..." />
-            <marker date="1423690122066" expanded="true" signature="38072:38324" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/8fb75f6/eaf2bba2-1044-44db-8fa8-cb5d184f0cbf/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0" vertical-offset="30" max-vertical-offset="102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerDetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0931373" vertical-offset="2486" max-vertical-offset="2924">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -844,102 +610,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leaguestats.php">
+    <entry file="file://$PROJECT_DIR$/dist/js/graphing_utility.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2822" max-vertical-offset="3757">
-          <caret line="171" column="15" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="6657" max-vertical-offset="11611">
+          <caret line="394" column="31" selection-start-line="394" selection-start-column="31" selection-end-line="394" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/library/Team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="646">
+          <caret line="23" column="56" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/lol/getGroupMembers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.13662791" vertical-offset="47" max-vertical-offset="544">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/lol/getMatchDetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7142856" vertical-offset="1326" max-vertical-offset="1683">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/lol/getPlayers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1860465" vertical-offset="408" max-vertical-offset="816">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/lol/getTheseMembersStats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5581396" vertical-offset="1224" max-vertical-offset="1836">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php">
+    <entry file="file://$PROJECT_DIR$/CRUD/library/riot_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6365796" vertical-offset="21" max-vertical-offset="442">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="99" max-vertical-offset="6681">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerDetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21587302" vertical-offset="0" max-vertical-offset="2924">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/library/league_html_builder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5" vertical-offset="2397" max-vertical-offset="3162">
-          <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
-          <folding>
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420574809490" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/api_interface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2696" max-vertical-offset="4199">
-          <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/graphing_utility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6657" max-vertical-offset="11611">
-          <caret line="394" column="31" selection-start-line="394" selection-start-column="31" selection-end-line="394" selection-end-column="31" />
-          <folding />
+        <state vertical-scroll-proportion="0.752907" vertical-offset="2801" max-vertical-offset="3162">
+          <caret line="185" column="1" selection-start-line="185" selection-start-column="1" selection-end-line="185" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/library/league.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5833333" vertical-offset="22729" max-vertical-offset="23409">
-          <caret line="1351" column="0" selection-start-line="1351" selection-start-column="0" selection-end-line="1351" selection-end-column="0" />
+        <state vertical-scroll-proportion="43.973873" vertical-offset="0" max-vertical-offset="22610">
+          <caret line="1089" column="49" selection-start-line="1089" selection-start-column="49" selection-end-line="1089" selection-end-column="49" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1423690122066" expanded="true" signature="1315:1745" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="2523:2989" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="3923:4388" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="5324:5790" placeholder="select mh.ma..." />
-            <marker date="1423690122066" expanded="true" signature="6783:6825" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="7362:7514" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="8130:8254" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="11359:11380" placeholder="select * fro..Players..." />
-            <marker date="1423690122066" expanded="true" signature="12244:12288" placeholder="select DISTI..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="13156:13475" placeholder="select COUNT..MatchDetails..." />
-            <marker date="1423690122066" expanded="true" signature="13275:13398" placeholder="SELECT DISTI..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="13341:13397" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="15863:15930" placeholder="select MAX(m..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="17448:17485" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="18178:18230" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="19146:19204" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="20049:20084" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="21041:21094" placeholder="UPDATE Playe..." />
-            <marker date="1423690122066" expanded="true" signature="21599:21689" placeholder="select COUNT..Players..." />
-            <marker date="1423690122066" expanded="true" signature="22119:22211" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="22716:22787" placeholder="select champ..champions..." />
-            <marker date="1423690122066" expanded="true" signature="23304:23730" placeholder="select clp.c..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="26008:26217" placeholder="select clp.t..ChampionLanePriority..." />
-            <marker date="1423690122066" expanded="true" signature="27145:27183" placeholder="UPDATE worki..." />
-            <marker date="1423690122066" expanded="true" signature="28251:28282" placeholder="UPDATE Champ..." />
-            <marker date="1423690122066" expanded="true" signature="29256:29308" placeholder="INSERT INTO ..." />
-            <marker date="1423690122066" expanded="true" signature="29886:30021" placeholder="select COUNT..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="30634:30861" placeholder="select COUNT..MatchHeader..." />
-            <marker date="1423690122066" expanded="true" signature="31341:31466" placeholder="select * fro..api_MatchHistory..." />
-            <marker date="1423690122066" expanded="true" signature="34887:34960" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423690122066" expanded="true" signature="35305:35372" placeholder="select leagu..Players..." />
-            <marker date="1423690122066" expanded="true" signature="35811:36165" placeholder="UPDATE Match..." />
-            <marker date="1423690122066" expanded="true" signature="38072:38324" placeholder="..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..Players..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..Players..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select DISTI..SummonerGroups..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..MatchDetails..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..api_MatchHistory..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select MAX(m..MatchHeader..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Playe..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..Players..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select clp.c..ChampionLanePriority..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select clp.t..ChampionLanePriority..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE worki..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Champ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..api_MatchHistory..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..MatchHeader..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..api_MatchHistory..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select leagu..Players..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Match..." />
+            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaguestats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.076923" vertical-offset="1278" max-vertical-offset="3366">
+          <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="102" max-vertical-offset="629">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/api_interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2773" max-vertical-offset="4216">
+          <caret line="172" column="54" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/library/SummonerNetwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.009803922" vertical-offset="1925" max-vertical-offset="6103">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding>
+            <marker date="1423776340694" expanded="true" signature="6621:6872" placeholder="..." />
+            <marker date="1423776340694" expanded="true" signature="8427:8445" placeholder="..." />
+            <marker date="1423776340694" expanded="true" signature="8427:8615" placeholder="..." />
+            <marker date="1423776340694" expanded="true" signature="9540:9647" placeholder="..." />
+            <marker date="1423776340694" expanded="true" signature="10226:10293" placeholder="select leagu..Players..." />
           </folding>
         </state>
       </provider>
