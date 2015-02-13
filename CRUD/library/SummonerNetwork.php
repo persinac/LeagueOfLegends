@@ -57,12 +57,12 @@ class SummonerNetwork {
         }
 
         $index = 1;
-        $target = 0;
-        $source = 0;
+        $target_index = 0;
+        $source_index = 0;
         $type = 1;
         $value = 1;
         $degree = 0;
-        $distance = 10;
+        $distance = 25;
         $query = "CALL getNetworkOfSummoners($sid)";
         $s_name = $this->GetSummonerName($sid);
 
@@ -72,30 +72,42 @@ class SummonerNetwork {
 
         $this->mys->next_result();
         if ($result = $this->mys->query($query)) {
-            $type = $type + 1;
+
             while ($row = $result->fetch_assoc()) {
-                $target = $index;
+                $type = 2;
+                $target_index = $index;
                 $degree = 1;
                 $value = 1;
-                $sum_id = $row['summonerId'];
-                $sum_name = $row['summonerName'];
+                $target_summoner_id = $row['summonerId'];
+                $target_sum_name = $row['summonerName'];
                 $slug = "";
                 $entity = "company";
                 if ($index % 10 == 0) {
                     $distance = $distance + 10;
                 }
 
-                if(!$this->DoesPlayerExistInNodeArray($sum_id)) {
-                    $this->AddToNodeArray($sum_id, $sum_name, $type, $sum_name, $slug, $entity);
+                if(!$this->DoesPlayerExistInNodeArray($target_summoner_id)) {
+                    $this->AddToNodeArray($target_summoner_id, $target_sum_name, $type, $target_sum_name, $slug, $entity);
+                } else {
+                    $this->UpdateType($target_summoner_id, $type);
                 }
 
-                if(!$this->DoesLinkExist($sid, $sum_id)) {
-                    $this->AddToLinkArray($sid, $sum_id, $source, $target, $distance, $value, $degree);
+                if(!$this->DoesLinkExist($sid, $target_summoner_id)) {
+                    $this->AddToLinkArray($sid, $target_summoner_id, $source_index, $target_index, $distance, $value, $degree);
+                } else {
+                    /*
+                     * I'm about to leave work, and should clean up this logic,
+                     * but if the link exists, and because it's in this main function,
+                     * UpdateType again (just to make sure) then update the link with the
+                     * following:
+                     *  value = 1
+                     *  degree = 1
+                     */
                 }
                 $value = 10;
 
-                $this->recursive_NoS($row['summonerId'], $degree,
-                    $type, $value, $source + 1,
+                $this->recursive_NoS($target_summoner_id, $degree,
+                    $type, $value, $source_index + 1,
                     $distance, $index);
                 $index = $index + 1;
             }
@@ -105,7 +117,7 @@ class SummonerNetwork {
 
     function recursive_NoS($id, $degree, $type, $value, $source, $distance, $index) {
 
-        $t_id = $id;
+        $source_id = $id;
         $t_degree = $degree + 1;
         $t_type = $type;
         $t_value = $value;
@@ -115,29 +127,35 @@ class SummonerNetwork {
         $target = 0;
         $t_source = $index;
 
-        $query = "CALL getNetworkOfSummoners($t_id)";
+        $query = "CALL getNetworkOfSummoners($source_id)";
 
-        if($t_degree <= 2) {
+        if($t_degree <= 3) {
             $this->mys->next_result();
             if ($result = $this->mys->query($query)) {
                 while ($row = $result->fetch_assoc()) {
                     $target = $index + 1;
-                    $sum_id = $row['summonerId'];
+                    $t_type = 3;
+                    $target_summoner_id = $row['summonerId'];
                     $sum_name = $row['summonerName'];
                     $slug = "";
                     $entity = "company";
 
-                    if(!$this->DoesPlayerExistInNodeArray($sum_id)) {
-                        $this->AddToNodeArray($sum_id, $sum_name, $t_type, $sum_name, $slug, $entity);
+                    if(!$this->DoesPlayerExistInNodeArray($target_summoner_id)) {
+                        $this->AddToNodeArray($target_summoner_id, $sum_name, $t_type, $sum_name, $slug, $entity);
                     }
 
-                    if(!$this->DoesLinkExist($t_id, $sum_id)) {
-                        $this->AddToLinkArray($t_id, $sum_id, $t_source, $target, $t_distance, $value, $t_degree);
+                    if(!$this->DoesLinkExist($source_id, $target_summoner_id)) {
+                        $new_target = $this->GetSummonerIDInArray($target_summoner_id);
+                        $this->AddToLinkArray($source_id, $target_summoner_id, $t_source, $new_target, $t_distance, $value, $t_degree);
                     }
+
+                    $this->recursive_NoS($target_summoner_id, $degree + 1,
+                        $type, $value, $source + 1,
+                        $distance, $index);
+
                     $index = $index + 1;
                 }
             }
-            //$this->recursive_NoS($t_id+1, $t_degree + 1, $t_type + 1, $t_value, $t_source+1, $t_distance, $index);
         }
     }
 
@@ -166,14 +184,22 @@ class SummonerNetwork {
         $this->link_array[] = $detail;
     }
 
+    function UpdateType($sid, $type) {
+        for($i = 0; $i < sizeof($this->node_array); $i++) {
+            if($this->node_array[$i]->summonerId == $sid) {
+                $this->node_array[$i]->type = $type;
+                break;
+            }
+        }
+    }
     /**
      * @param $sid - summonerID to search for
      * @return int - index of found ID, -1 if no ID is found
      */
-    function SearchForIDInArray($sid) {
+    function GetSummonerIDInArray($sid) {
         $isFound = -1;
-        for($i = 0; $i < sizeof($this->link_array); $i++) {
-            if($this->link_array[$i]->source_summonerId == $sid) {
+        for($i = 0; $i < sizeof($this->node_array); $i++) {
+            if($this->node_array[$i]->summonerId == $sid) {
                 $isFound = $i;
                 break;
             }
@@ -214,8 +240,8 @@ class SummonerNetwork {
         $html .= '<table id="win_perc_by_lane_table" class="table table-striped table-hover">';
         $html .= '<thead class="header_bg">
             <th>Source Summoner ID</th>
-            <th>Source Index</th>
             <th>Target Summoner ID</th>
+            <th>Source Index</th>
             <th>Target Index</th>
             <th>Distance</th>
             <th>Value</th>
@@ -232,18 +258,6 @@ class SummonerNetwork {
             $html .= '<td >'.$this->link_array[$i]->distance.'</td>';
             $html .= '<td >'.$this->link_array[$i]->value.'</td>';
             $html .= '<td >'.$this->link_array[$i]->degree.'</td>';
-            $html .= '</tr>';
-        }
-        if($this->DoesLinkExist(24562993,
-            38937958)) {
-            $html .= '<tr>';
-            $html .= '<td >24562993</td>';
-            $html .= '<td >38937958</td>';
-            $html .= '<td >'.$this->link_array[$i]->source.'</td>';
-            $html .= '<td >'.$this->link_array[$i]->target.'</td>';
-            $html .= '<td >'.$this->link_array[$i]->distance.'</td>';
-            $html .= '<td >'.$this->link_array[$i]->value.'</td>';
-            $html .= '<td >******************</td>';
             $html .= '</tr>';
         }
         $html .= '</tbody></table>';

@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebb000b0-1546-4eff-813f-3ad4fde2e135" name="Default" comment="Fixed the vertical tabs not showing up in team details view. Messed up the references">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CRUD/library/SummonerNetwork.php" afterPath="$PROJECT_DIR$/CRUD/library/SummonerNetwork.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/js/api_interface.js" afterPath="$PROJECT_DIR$/dist/js/api_interface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php" afterPath="$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leaguestats.php" afterPath="$PROJECT_DIR$/leaguestats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
     </list>
     <list id="39d312d3-6348-4e22-858e-b102678010c2" name="Rejected commit: Default" comment="Fixed the vertical tabs not showing up in team details view. Messed up the references" />
     <ignored path="LeagueOfLegends.iws" />
@@ -49,14 +44,13 @@
       <file leaf-file-name="SummonerNetwork.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CRUD/library/SummonerNetwork.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.009803922" vertical-offset="1925" max-vertical-offset="6103">
-              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.47113883" vertical-offset="2316" max-vertical-offset="6341">
+              <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
               <folding>
-                <marker date="1423776340694" expanded="true" signature="6621:6872" placeholder="..." />
-                <marker date="1423776340694" expanded="true" signature="8427:8445" placeholder="..." />
-                <marker date="1423776340694" expanded="true" signature="8427:8615" placeholder="..." />
-                <marker date="1423776340694" expanded="true" signature="9540:9647" placeholder="..." />
-                <marker date="1423776340694" expanded="true" signature="10226:10293" placeholder="select leagu..Players..." />
+                <marker date="1423863280566" expanded="true" signature="7781:8032" placeholder="..." />
+                <marker date="1423863280566" expanded="true" signature="9039:9227" placeholder="..." />
+                <marker date="1423863280566" expanded="true" signature="10152:10259" placeholder="..." />
+                <marker date="1423863280566" expanded="true" signature="10838:10905" placeholder="select leagu..Players..." />
               </folding>
             </state>
           </provider>
@@ -65,18 +59,18 @@
       <file leaf-file-name="getSummonerNetwork.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617" vertical-offset="102" max-vertical-offset="629">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="629">
               <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api_interface.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/js/api_interface.js">
+      <file leaf-file-name="graphing_utility.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/js/graphing_utility.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2773" max-vertical-offset="4216">
-              <caret line="172" column="54" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5943" max-vertical-offset="11611">
+              <caret line="403" column="30" selection-start-line="403" selection-start-column="30" selection-end-line="403" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -112,10 +106,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1911" />
+    <option name="y" value="-9" />
+    <option name="width" value="1298" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -140,7 +134,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,11 +236,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad/bin/git.exe" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="options.lastSelected" value="vcs.Git" />
@@ -278,28 +272,29 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -318,31 +313,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="1911" y="-9" width="1298" height="1042" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22512235" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2241567" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.045385778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0890625" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23600605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20703125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22512235" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2241567" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -368,45 +363,41 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CRUD/library/SummonerNetwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6103">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423863280566" expanded="true" signature="7781:8032" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="9039:9227" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="10152:10259" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="10838:10905" placeholder="select leagu..Players..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="629">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/api_interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2773" max-vertical-offset="4216">
+          <caret line="172" column="54" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/library/league.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="18408" max-vertical-offset="22610">
           <caret line="1089" column="49" selection-start-line="1089" selection-start-column="49" selection-end-line="1089" selection-end-column="49" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..Players..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..Players..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select DISTI..SummonerGroups..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..MatchDetails..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..api_MatchHistory..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select MAX(m..MatchHeader..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Playe..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..Players..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select clp.c..ChampionLanePriority..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select clp.t..ChampionLanePriority..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE worki..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Champ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..api_MatchHistory..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..MatchHeader..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..api_MatchHistory..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select leagu..Players..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Match..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -416,11 +407,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7004">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1423776340694" expanded="true" signature="6621:6872" placeholder="..." />
-            <marker date="1423776340694" expanded="true" signature="8427:8445" placeholder="..." />
-            <marker date="1423776340694" expanded="true" signature="8427:8615" placeholder="..." />
-            <marker date="1423776340694" expanded="true" signature="9540:9647" placeholder="..." />
-            <marker date="1423776340694" expanded="true" signature="10226:10293" placeholder="select leagu..Players..." />
+            <marker date="1423863280566" expanded="true" signature="7781:8032" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="9039:9227" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="10152:10259" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="10838:10905" placeholder="select leagu..Players..." />
           </folding>
         </state>
       </provider>
@@ -610,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/graphing_utility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6657" max-vertical-offset="11611">
-          <caret line="394" column="31" selection-start-line="394" selection-start-column="31" selection-end-line="394" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/library/Team.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="646">
@@ -649,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.5581396" vertical-offset="1224" max-vertical-offset="1836">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,39 +664,6 @@
           <caret line="1089" column="49" selection-start-line="1089" selection-start-column="49" selection-end-line="1089" selection-end-column="49" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select mh.ma..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..Players..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..Players..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select DISTI..SummonerGroups..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..MatchDetails..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..api_MatchHistory..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select MAX(m..MatchHeader..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Playe..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..Players..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select champ..champions..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select clp.c..ChampionLanePriority..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select clp.t..ChampionLanePriority..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE worki..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Champ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..api_MatchHistory..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select COUNT..MatchHeader..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select * fro..api_MatchHistory..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select summo..SummonerGroups..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="select leagu..Players..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="UPDATE Match..." />
-            <marker date="1423752529450" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -729,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/lol/getSummonerNetwork.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617" vertical-offset="102" max-vertical-offset="629">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="629">
           <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
           <folding />
         </state>
@@ -743,16 +692,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/graphing_utility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5943" max-vertical-offset="11611">
+          <caret line="403" column="30" selection-start-line="403" selection-start-column="30" selection-end-line="403" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/library/SummonerNetwork.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.009803922" vertical-offset="1925" max-vertical-offset="6103">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47113883" vertical-offset="2316" max-vertical-offset="6341">
+          <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
           <folding>
-            <marker date="1423776340694" expanded="true" signature="6621:6872" placeholder="..." />
-            <marker date="1423776340694" expanded="true" signature="8427:8445" placeholder="..." />
-            <marker date="1423776340694" expanded="true" signature="8427:8615" placeholder="..." />
-            <marker date="1423776340694" expanded="true" signature="9540:9647" placeholder="..." />
-            <marker date="1423776340694" expanded="true" signature="10226:10293" placeholder="select leagu..Players..." />
+            <marker date="1423863280566" expanded="true" signature="7781:8032" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="9039:9227" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="10152:10259" placeholder="..." />
+            <marker date="1423863280566" expanded="true" signature="10838:10905" placeholder="select leagu..Players..." />
           </folding>
         </state>
       </provider>
