@@ -24,6 +24,7 @@ class SummonerNetwork {
     var $summonerLinks = array();
 
     var $node_array = array();
+    var $link_array = array();
 
     function __construct($sid, $host, $user, $pass, $database) {
         $this->summoner_id = $sid;
@@ -55,9 +56,6 @@ class SummonerNetwork {
             $sid = $this->summoner_id;
         }
 
-        $main_string = "";
-        $nodes = '"nodes":[';
-        $links = '"links":[';
         $index = 1;
         $target = 0;
         $source = 0;
@@ -68,46 +66,17 @@ class SummonerNetwork {
         $query = "CALL getNetworkOfSummoners($sid)";
         $s_name = $this->GetSummonerName($sid);
 
-        $html = '<div class="recent_games_size">';
-        $html .= '<table id="win_perc_by_lane_table" class="table table-striped table-hover">';
-        $html .= '<thead class="header_bg">
-            <th>Source Summoner ID</th>
-            <th>Source</th>
-            <th>Target Summoner ID</th>
-            <th>Target</th>
-            <th>Where</th>
-            </tr>';
-        $html .= '</thead>';
-        $html .= '<tbody>';
-
-        $this->temp_table = $html;
-        $this->global_counter = $this->global_counter + 1;
-
-        $this->player_nodes .= '{"name":"' . $s_name . '"
-                                , "type":"'.$type.'"
-                                , "full_name":"' . $s_name . '"
-                                , "slug":""
-                                , "entity":"company"
-                                , "img_hrefD":""
-                                , "img_hrefL":""
-                                },';
         $entity = "company";
         $slug = "";
         $this->AddToNodeArray($sid, $s_name, $type, $s_name, $slug, $entity);
-        $html = '<tr>';
-        $html .= '<td >'.$sid.'</td>';
-        $html .= '<td >'.$source.'</td>';
-        $html .= '<td > 0 </td>';
-        $html .= '<td > 0 </td>';
-        $html .= '<td > Main function PRE WHILE </td>';
-        $html .= '</tr>';
-        $this->temp_table .= $html;
+
         $this->mys->next_result();
         if ($result = $this->mys->query($query)) {
             $type = $type + 1;
             while ($row = $result->fetch_assoc()) {
                 $target = $index;
                 $degree = 1;
+                $value = 1;
                 $sum_id = $row['summonerId'];
                 $sum_name = $row['summonerName'];
                 $slug = "";
@@ -116,13 +85,6 @@ class SummonerNetwork {
                     $distance = $distance + 10;
                 }
 
-                $this->player_nodes .= '{"name":"'.$sum_name.'"
-                , "type":"'.$type.'", "full_name":"'.$sum_name.'", "slug":""
-                , "entity":"company", "img_hrefD":"", "img_hrefL":"", "summonerId":"'.$sum_id.'"},';
-
-                $this->player_links .= '{"source":'.$source.', "target":' . $target . '
-                , "distance":' . $distance . ', "value":'.$value.'},';
-
                 if(!$this->DoesPlayerExistInNodeArray($sum_id)) {
                     $this->AddToNodeArray($sum_id, $sum_name, $type, $sum_name, $slug, $entity);
                 }
@@ -130,59 +92,32 @@ class SummonerNetwork {
                 if(!$this->DoesLinkExist($sid, $sum_id)) {
                     $this->AddToLinkArray($sid, $sum_id, $source, $target, $distance, $value, $degree);
                 }
-
-                $html = '<tr>';
-                $html .= '<td >'.$sid.'</td>';
-                $html .= '<td >'.$source.'</td>';
-                $html .= '<td >'.$sum_id.'</td>';
-                $html .= '<td >'.$target.'</td>';
-                $html .= '<td > Main function </td>';
-                $html .= '</tr>';
-                $this->temp_table .= $html;
-                $this->global_counter = $this->global_counter + 1;
+                $value = 10;
 
                 $this->recursive_NoS($row['summonerId'], $degree,
                     $type, $value, $source + 1,
                     $distance, $index);
-                $this->recursive_calls = $this->recursive_calls + 1;
-                //$source = $source + 1;
                 $index = $index + 1;
             }
             $result->free();
         }
-
-        $nodes .= substr($this->player_nodes, 0, strlen($this->player_nodes) - 1);
-        $links .= substr($this->player_links, 0, strlen($this->player_links) - 1);
-
-        $main_string = "{" . $nodes . "]," . $links . "]}";
-        $html = '</tbody></table>';
-        $html .= '</div>';
-        $this->temp_table .= $html;
-        return $main_string;
     }
 
-    function recursive_NoS($id, $degree, $type, $value, $source, $distance, &$index) {
+    function recursive_NoS($id, $degree, $type, $value, $source, $distance, $index) {
 
         $t_id = $id;
-        $t_degree = $degree;
+        $t_degree = $degree + 1;
         $t_type = $type;
         $t_value = $value;
 
-        $t_distance = ($distance * $degree);
+        $t_distance = ($distance * $t_degree);
 
-        if($index == 1) {
-            $t_source = $source;
-        } else {
-            $t_source = $this->recursive_calls + 1;
-        }
-        $html = "";
         $target = 0;
         $t_source = $index;
-        $my_counter = 0;
 
         $query = "CALL getNetworkOfSummoners($t_id)";
 
-        if($degree < 2) {
+        if($t_degree <= 2) {
             $this->mys->next_result();
             if ($result = $this->mys->query($query)) {
                 while ($row = $result->fetch_assoc()) {
@@ -193,60 +128,17 @@ class SummonerNetwork {
                     $entity = "company";
 
                     if(!$this->DoesPlayerExistInNodeArray($sum_id)) {
-                        $this->AddToNodeArray($sum_id, $sum_name, $type, $sum_name, $slug, $entity);
+                        $this->AddToNodeArray($sum_id, $sum_name, $t_type, $sum_name, $slug, $entity);
                     }
 
                     if(!$this->DoesLinkExist($t_id, $sum_id)) {
-                        $this->AddToLinkArray($t_id, $sum_id, $t_source, $target, $t_distance, $value, $degree);
+                        $this->AddToLinkArray($t_id, $sum_id, $t_source, $target, $t_distance, $value, $t_degree);
                     }
-
-                    /*if($whatIndex == -1) {
-
-                        $html .= '<tr>';
-                        $html .= '<td >'.$t_id.'</td>';
-                        $html .= '<td >'.$t_source.'</td>';
-                        $html .= '<td >'.$sid.'</td>';
-                        $html .= '<td >'.$target.'</td>';
-                        $html .= '<td > recursive_NoS ID NOT FOUND </td>';
-                        $html .= '</tr>';
-
-
-                        $this->player_nodes .= '{"name":"'.$row['summonerName'].'"
-                        , "type":3, "full_name":"'.$row['summonerName'].'", "slug":""
-                        , "entity":"company", "img_hrefD":"", "img_hrefL":"", "summonerId":"'.$row['summonerId'].'"},';
-
-                        $this->player_links .= '{"source":'.$t_source.', "target":' . $target . '
-                        , "distance":' . $t_distance . ', "value":10},';
-
-                        $my_counter = $my_counter + 1;
-                        $index = $index + 1;
-                        $this->global_counter = $this->global_counter + 1;
-                    } else {
-                        //add link based on source at $whatIndex
-                        $t_source = $this->summonerLinks[$whatIndex]->source;
-                        $this->player_links .= '{"source":'.$t_source.', "target":' . $target . '
-                        , "distance":' . $t_distance . ', "value":10},';
-                        $html .= '<tr>';
-                        $html .= '<td >'.$sid.'</td>';
-                        $html .= '<td >'.$t_source.'</td>';
-                        $html .= '<td >'.$t_id.'</td>';
-                        $html .= '<td >'.$target.'</td>';
-                        $html .= '<td > recursive_NoS ID FOUND </td>';
-                        $html .= '</tr>';
-                    }*/
+                    $index = $index + 1;
                 }
             }
-            //$this->temp_table .= $html;
-            $this->recursive_NoS($t_id+1, $t_degree + 1, $t_type + 1, $t_value + 1, $t_source+1, $t_distance, $index);
+            //$this->recursive_NoS($t_id+1, $t_degree + 1, $t_type + 1, $t_value, $t_source+1, $t_distance, $index);
         }
-    }
-
-    function AddRecordToArray($sid, $source, $target) {
-        $detail = new stdClass();
-        $detail->summonerId = $sid;
-        $detail->source = $source;
-        $detail->target = $target;
-        $this->summonerLinks[] = $detail;
     }
 
     function AddToNodeArray($sid, $name, $type, $full_name,
@@ -279,28 +171,13 @@ class SummonerNetwork {
      * @return int - index of found ID, -1 if no ID is found
      */
     function SearchForIDInArray($sid) {
-        $html = '<tr>';
-        $html .= '<td > - </td>';
-        $html .= '<td > - </td>';
-        $html .= '<td > - </td>';
-        $html .= '<td > - </td>';
-        $html .= '<td > SEARCHING FOR: '.$sid.' </td>';
-        $html .= '</tr>';
         $isFound = -1;
         for($i = 0; $i < sizeof($this->link_array); $i++) {
             if($this->link_array[$i]->source_summonerId == $sid) {
                 $isFound = $i;
-                $html .= '<tr>';
-                $html .= '<td >'.$this->link_array[$i]->source_summonerId.'</td>';
-                $html .= '<td >'.$this->link_array[$i]->source.'</td>';
-                $html .= '<td > - </td>';
-                $html .= '<td > - </td>';
-                $html .= '<td > FOUND AT: '.$i.' </td>';
-                $html .= '</tr>';
                 break;
             }
         }
-        $this->temp_table .= $html;
         return $isFound;
     }
 
@@ -323,6 +200,10 @@ class SummonerNetwork {
                 && $this->link_array[$i]->target_summonerId == $target_id) {
                 $isFound = TRUE;
                 break;
+            } else if($this->link_array[$i]->source_summonerId == $target_id
+                && $this->link_array[$i]->target_summonerId == $source_id) {
+                $isFound = TRUE;
+                break;
             }
         }
         return $isFound;
@@ -332,17 +213,37 @@ class SummonerNetwork {
         $html = '<div class="recent_games_size">';
         $html .= '<table id="win_perc_by_lane_table" class="table table-striped table-hover">';
         $html .= '<thead class="header_bg">
-            <th>Summoner ID</th>
-            <th>Source</th>
-            <th>Target</th>
+            <th>Source Summoner ID</th>
+            <th>Source Index</th>
+            <th>Target Summoner ID</th>
+            <th>Target Index</th>
+            <th>Distance</th>
+            <th>Value</th>
+            <th>Degree</th>
             </tr>';
         $html .= '</thead>';
         $html .= '<tbody>';
-        for($i = 0; $i < sizeof($this->summonerLinks); $i++) {
+        for($i = 0; $i < sizeof($this->link_array); $i++) {
             $html .= '<tr>';
-            $html .= '<td >'.$this->summonerLinks[$i]->summonerId.'</td>';
-            $html .= '<td >'.$this->summonerLinks[$i]->source.'</td>';
-            $html .= '<td >'.$this->summonerLinks[$i]->target.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->source_summonerId.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->target_summonerId.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->source.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->target.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->distance.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->value.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->degree.'</td>';
+            $html .= '</tr>';
+        }
+        if($this->DoesLinkExist(24562993,
+            38937958)) {
+            $html .= '<tr>';
+            $html .= '<td >24562993</td>';
+            $html .= '<td >38937958</td>';
+            $html .= '<td >'.$this->link_array[$i]->source.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->target.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->distance.'</td>';
+            $html .= '<td >'.$this->link_array[$i]->value.'</td>';
+            $html .= '<td >******************</td>';
             $html .= '</tr>';
         }
         $html .= '</tbody></table>';
@@ -356,16 +257,22 @@ class SummonerNetwork {
         $html .= '<table id="win_perc_by_lane_table" class="table table-striped table-hover">';
         $html .= '<thead class="header_bg">
             <th>Summoner ID</th>
-            <th>Source</th>
-            <th>Target</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Full Name</th>
+            <th>Slug</th>
+            <th>Entity</th>
             </tr>';
         $html .= '</thead>';
         $html .= '<tbody>';
-        for($i = 0; $i < sizeof($this->summonerLinks); $i++) {
+        for($i = 0; $i < sizeof($this->node_array); $i++) {
             $html .= '<tr>';
-            $html .= '<td >'.$this->summonerLinks[$i]->summonerId.'</td>';
-            $html .= '<td >'.$this->summonerLinks[$i]->source.'</td>';
-            $html .= '<td >'.$this->summonerLinks[$i]->target.'</td>';
+            $html .= '<td >'.$this->node_array[$i]->summonerId.'</td>';
+            $html .= '<td >'.$this->node_array[$i]->name.'</td>';
+            $html .= '<td >'.$this->node_array[$i]->type.'</td>';
+            $html .= '<td >'.$this->node_array[$i]->full_name.'</td>';
+            $html .= '<td >'.$this->node_array[$i]->slug.'</td>';
+            $html .= '<td >'.$this->node_array[$i]->entity.'</td>';
             $html .= '</tr>';
         }
         $html .= '</tbody></table>';
@@ -397,10 +304,6 @@ class SummonerNetwork {
         return $html;
     }
 
-    function GetTable() {
-        return $this->temp_table;
-    }
-
     function GetSummonerName($id)
     {
         $x = "";
@@ -414,5 +317,43 @@ class SummonerNetwork {
             $result->free();
         }
         return $x;
+    }
+
+    function BuildNodeString() {
+        $final_string = "";
+        $nodes = '"nodes":[';
+
+        for($i = 0; $i < sizeof($this->node_array); $i++) {
+            $nodes .= '{"name":"'.$this->node_array[$i]->name.'"';
+            $nodes .= ', "type":"'.$this->node_array[$i]->type.'", "full_name":"'.$this->node_array[$i]->full_name.'"';
+            $nodes .= ', "slug":"'.$this->node_array[$i]->slug.'"';
+            $nodes .= ', "entity":"'.$this->node_array[$i]->entity.'"';
+            $nodes .= ', "img_hrefD":"", "img_hrefL":"", "summonerId":"'.$this->node_array[$i]->summonerId.'"}
+            ,';
+        }
+
+        $final_string .= substr($nodes, 0, strlen($nodes) - 1);
+        return $final_string . ']';
+    }
+
+    function BuildLinkString() {
+        $final_string = "";
+        $links = '"links":[';
+
+        for($i = 0; $i < sizeof($this->link_array); $i++) {
+            $links .= '{"source":'.$this->link_array[$i]->source.', "target":' . $this->link_array[$i]->target;
+            $links .= ', "distance":' . $this->link_array[$i]->distance . ', "value":'.$this->link_array[$i]->value.'}
+            ,';
+        }
+
+        $final_string .= substr($links, 0, strlen($links) - 1);
+        return $final_string . ']';
+    }
+
+    function BuildCompleteNodeLinkString() {
+        $nodes = $this->BuildNodeString();
+        $links = $this->BuildLinkString();
+        $main_string = "{" . $nodes . "," . $links . "}";
+        return $main_string;
     }
 }

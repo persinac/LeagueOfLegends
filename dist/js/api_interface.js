@@ -170,13 +170,13 @@ function displaySummonerNetwork(data) {
         dataType: "html",
         success: function(response) {
             var json = JSON.parse(response);
-            //console.log(json['graph_data']);
+            console.log(JSON.parse(json['graph_data']));
             $("#dyn_content").html(html);
-            $("#mydata1").html(json['table_data']);
-            $("#mydata1").append(json['table_data_2']);
+            $("#mydata1").html(json['node_table_data']);
+            $("#mydata1").append(json['link_table_data']);
 
-            //graph_FD_SummonerNetwork(json['graph_data']);
-            //panZoom = svgPanZoom('#mysvgele');
+            graph_FD_SummonerNetwork(json['graph_data']);
+            panZoom = svgPanZoom('#mysvgele');
         },
         error: function (response) {
             console.log("ERROR: " + response);

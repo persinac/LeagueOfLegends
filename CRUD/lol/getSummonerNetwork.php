@@ -17,12 +17,14 @@ include('../../CRUD/library/league_html_builder.php');
 $network = new SummonerNetwork($_SESSION['summonerId'],
     $lol_host, $lol_un, $lol_pw, $lol_db);
 
-$retVal = $network->FetchDataForSummonerNetwork_FD();
+$network->FetchDataForSummonerNetwork_FD();
 
-$toReturn = (object) array('graph_data'=>'', 'table_data'=>'asdf', 'table_data_2'=>'asdf');
+$retVal = $network->BuildCompleteNodeLinkString();
+
+$toReturn = (object) array('graph_data'=>'', 'node_table_data'=>'asdf', 'link_table_data'=>'asdf');
 $toReturn->graph_data = $retVal;
-$toReturn->table_data = $network->GetTable();
-$toReturn->table_data_2 = $network->GetSummonerLinkArrayTable();
+$toReturn->node_table_data = $network->GetNodeArrayTable();
+$toReturn->link_table_data = $network->GetLinkArrayTable();
 echo json_encode($toReturn);
 
 $network->CloseConnection();

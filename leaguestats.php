@@ -89,7 +89,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <!-- Required for team details dropdown in match details view -->
 <script src="dist/jq_ui/js/jquery-1.10.2.js"></script>
