@@ -103,6 +103,7 @@ class SummonerNetwork {
                      *  value = 1
                      *  degree = 1
                      */
+                    $this->UpdateDegree($sid, $target_summoner_id, 1, 1);
                 }
                 $value = 10;
 
@@ -190,6 +191,22 @@ class SummonerNetwork {
                 $this->node_array[$i]->type = $type;
                 break;
             }
+        }
+    }
+
+    function UpdateDegree($source_id, $target_id, $degree, $value) {
+        for($i = 0; $i < sizeof($this->link_array); $i++) {
+            if($this->link_array[$i]->source_summonerId == $source_id
+                && $this->link_array[$i]->target_summonerId == $target_id) {
+                //echo "*****FOUND: $source_id, $target_id, $degree";
+                $this->link_array[$i]->degree = $degree;
+                $this->link_array[$i]->value = $value;
+                break;
+            } /*else if($this->link_array[$i]->source_summonerId == $target_id
+                && $this->link_array[$i]->target_summonerId == $source_id) {
+                $isFound = TRUE;
+                break;
+            }*/
         }
     }
     /**
