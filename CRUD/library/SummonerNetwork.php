@@ -103,7 +103,8 @@ class SummonerNetwork {
                      *  value = 1
                      *  degree = 1
                      */
-                    $this->UpdateDegree($sid, $target_summoner_id, 1, 1);
+                    //$this->UpdateDegree($sid, $target_summoner_id, 1, 1);
+                    $this->UpdateLink($sid, $target_summoner_id, 0, 1, 1);
                 }
                 $value = 10;
 
@@ -151,7 +152,7 @@ class SummonerNetwork {
                     }
 
                     $this->recursive_NoS($target_summoner_id, $degree + 1,
-                        $type, $value, $source + 1,
+                        $type, $value, $t_source + 1,
                         $distance, $index);
 
                     $index = $index + 1;
@@ -209,6 +210,25 @@ class SummonerNetwork {
             }*/
         }
     }
+
+    function UpdateLink($source_id, $target_id, $source_index, $degree, $value) {
+        for($i = 0; $i < sizeof($this->link_array); $i++) {
+            if($this->link_array[$i]->source_summonerId == $source_id
+                && $this->link_array[$i]->target_summonerId == $target_id) {
+                //echo "*****FOUND: $source_id, $target_id, $degree";
+                $this->link_array[$i]->degree = $degree;
+                $this->link_array[$i]->value = $value;
+                $this->link_array[$i]->source = $source_index;
+                break;
+            } /*else if($this->link_array[$i]->source_summonerId == $target_id
+                && $this->link_array[$i]->target_summonerId == $source_id) {
+                $isFound = TRUE;
+                break;
+            }*/
+        }
+    }
+
+
     /**
      * @param $sid - summonerID to search for
      * @return int - index of found ID, -1 if no ID is found
